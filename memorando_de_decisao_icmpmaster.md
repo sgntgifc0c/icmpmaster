@@ -3,11 +3,11 @@
 
 | Campo | Informação |
 |---|---|
-| Curso / Disciplina | `[]` |
-| Projeto integrador | `[]` |
-| Orientador(a) | `[]` |
-| Data de entrega desta etapa | `[]` |
-| Integrantes do grupo | `[]` |
+| Curso / Disciplina | `[Ciência da Computação / Estruturas de dados II]` |
+| Projeto integrador | `[icmpmaster]` |
+| Orientador(a) | `[Andrea Ono Sakai]` |
+| Data de entrega desta etapa | `[08/09/2026]` |
+| Integrantes do grupo | `[Eduardo Quintino Filho, Felipe Veiga da Silva, Henrique de Aguiar Fernandes, Niccolas Lupetti dos Santos, Tharik Lima da Silva]` |
 
 ---
 
@@ -20,6 +20,8 @@ O pipeline do projeto já está definido: qualquer fonte de dados precisa produz
 -->
 
 [Escreva aqui uma frase, qual decisão precisa ser tomada e por quê]
+
+A equipe precisa decidir entre utilizar um dataset real publicado ou a API do RIPE Atlas para alimentar o pipeline com métricas de rede (latência, perda e jitter), garantindo a viabilidade técnica e a robustez necessárias para a próxima fase do projeto.
 
 ## 2. Opção A — Dataset real
 
