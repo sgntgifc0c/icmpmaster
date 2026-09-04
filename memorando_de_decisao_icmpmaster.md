@@ -3,11 +3,11 @@
 
 | Campo | Informação |
 |---|---|
-| Curso / Disciplina | `[Ciência da Computação / Estruturas de dados II]` |
-| Projeto integrador | `[icmpmaster]` |
-| Orientador(a) | `[Andrea Ono Sakai]` |
-| Data de entrega desta etapa | `[08/09/2026]` |
-| Integrantes do grupo | `[Eduardo Quintino Filho, Felipe Veiga da Silva, Henrique de Aguiar Fernandes, Niccolas Lupetti dos Santos, Tharik Lima da Silva]` |
+| Curso / Disciplina | `Ciência da Computação / Estruturas de dados II` |
+| Projeto integrador | `icmpmaster` |
+| Orientador(a) | `Andrea Ono Sakai` |
+| Data de entrega desta etapa | `08/09/2026` |
+| Integrantes do grupo | `Eduardo Quintino Filho, Felipe Veiga da Silva, Henrique de Aguiar Fernandes, Niccolas Lupetti dos Santos, Tharik Lima da Silva` |
 
 ---
 
