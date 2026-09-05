@@ -27,28 +27,43 @@ A equipe precisa decidir entre utilizar um dataset real publicado ou a API do RI
 
 <!-- O que foi encontrado sobre um dataset real de ICMP. Cite a fonte de cada informação. -->
 
-- **Origem / link:** [ ]
-- **Formato:** [ ]
-- **Período coberto:** [ ]
-- **Campos disponíveis:** [ ]
-- **Licença de uso:** [ ]
+- **Origem / link:**
+ https://www.kaggle.com/datasets/kaiser14/network-anomaly-dataset
+
+- **Formato:**
+ CSV
+
+- **Período coberto:** 
+Dados estáticos consolidados de monitoramento de tráfego
+
+- **Campos disponíveis:**
+ timestamp; bandwidth; throughput; congestion; packet_loss; latency; jitter; Routers; Planned route; Network measure; Network target; Video target; Percentage video occupancy; Bitrate video; Number videos
+
+- **Licença de uso:** 
+Apache 2.0
 
 **Resumo do que foi encontrado:**
-
-[Escreva aqui, citando a fonte consultada]
+Foi encontrado um dataset estruturado em formato tabular no Kaggle, sob licença Apache 2.0, que contém registros de monitoramento de rede e tráfego multimídia sob carga. Esse conjunto de dados oferece diretamente as colunas de desempenho necessárias para o pipeline do projeto — como latency, packet_loss e jitter — permitindo o uso imediato dos dados de forma estática. Não foi necessário configurar nenhuma infraestrutura de captura em tempo real, pois os dados já estão prontos para serem utilizados.
 
 ## 3. Opção B — API do RIPE Atlas
 
 <!-- O que foi encontrado sobre a API: autenticação, criação e consulta de medições. Cite a fonte de cada informação. -->
 
-- **Documentação consultada (link):** [ ]
-- **Autenticação exigida:** [ ]
-- **Como se cria uma medição:** [ ]
-- **Como se consultam os resultados:** [ ]
+- **Documentação consultada (link):** 
+https://atlas.ripe.net/docs/getting-started/what-is-ripe-atlas
+
+- **Autenticação exigida:** 
+
+Chaves de API (API Keys) para acesso programático ou autenticação por sessão. A maioria das leituras funciona sem autenticação, mas é obrigatória para criar ou gerenciar medições.
+
+- **Como se cria uma medição:**
+Para criar uma medição, você usa um assistente de três passos na interface web ou manda uma requisição pela API. Primeiro, nas definições, você escolhe o tipo de teste (como ping ou traceroute) e o IP ou site alvo. Depois, seleciona as sondas de rede (pode deixar 50 aleatórias pelo mundo ou escolher por país/mapa). Por fim, no agendamento, você define quando o teste começa e termina, ou marca como One-off para rodar apenas uma vez na hora.
+
+- **Como se consultam os resultados:**
+Para consultar os resultados, você acessa a página de resultados da medição específica (clicando no ID dela na lista) ou faz uma requisição GET para o endpoint da API da plataforma informando o ID da medição (/api/v2/measurements/<id>/results/), sendo que dados públicos podem ser acessados livremente e dados restritos exigem chave de API.
 
 **Resumo do que foi encontrado:**
-
-[Escreva aqui, citando a fonte consultada]
+O RIPE Atlas é uma infraestrutura global de monitoramento ativo de redes que utiliza milhares de sondas para coletar métricas de desempenho como latência, perda e rotas. Por meio da sua API, é possível realizar consultas públicas e recuperar resultados de testes anteriores via requisições GET de forma gratuita e sem autenticação, ou criar novas medições customizadas exigindo autenticação por chave de API e o consumo de créditos da plataforma.
 
 ## 4. Comparação
 
@@ -56,28 +71,28 @@ A equipe precisa decidir entre utilizar um dataset real publicado ou a API do RI
 
 | Critério | Opção A — Dataset real | Opção B — API RIPE Atlas |
 |---|---|---|
-| Controle sobre a coleta | | |
-| Diversidade geográfica | | |
-| Custo / complexidade de implementação | | |
-| Tempo até os primeiros dados estarem disponíveis | | |
+| Controle sobre a coleta | |B|
+| Diversidade geográfica | |B|
+| Custo / complexidade de implementação | |B|
+| Tempo até os primeiros dados estarem disponíveis |A| |
 
 ## 5. Recomendação
 
 <!-- Uma frase direta: qual opção você recomenda. -->
 
-[Escreva aqui]
+Recomendo a utilização da Opção B(RIPE Atlas) para o projeto.
 
 ## 6. Justificativa
 
 <!-- Por que essa opção vence a outra, com base nas evidências das seções 2, 3 e 4 — não em preferência pessoal. -->
 
-[Escreva aqui]
+A Opção B vence a Opção A porque oferece controle ativo sobre a coleta de dados e ampla diversidade geográfica através de milhares de sondas reais globalmente distribuídas, enquanto o dataset estático (Opção A) é limitado, desatualizado e não permite direcionar testes para os alvos específicos necessários. Embora a Opção B apresente maior complexidade de implementação e dependa de créditos para novas medições, a possibilidade de consultar dados históricos e públicos existentes de forma gratuita via requisições GET compensa a barreira técnica, garantindo métricas reais e sob demanda.
 
 ## 7. Riscos e limitações
 
 <!-- O que pode dar errado com a opção escolhida, e como isso poderia ser mitigado. -->
 
-[Escreva aqui]
+O principal risco é o esgotamento de créditos por excesso de novas medições e a indisponibilidade pontual de sondas, mas isso é mitigado priorizando consultas gratuitas em dados já existentes (GET), selecionando grupos amplos de sondas por região e implementando um tratamento de erros adequado.
 
 ## 8. Contribuição Individual dos Integrantes
 
@@ -124,6 +139,14 @@ A equipe precisa decidir entre utilizar um dataset real publicado ou a API do RI
 
 <!-- Mínimo de 3 fontes. Liste todas as páginas de documentação, artigos ou repositórios usados. -->
 
-1. [ ]
-2. [ ]
-3. [ ]
+1. https://atlas.ripe.net/docs/apis/rest-api-manual/measurements/results-and-latest
+
+2. https://atlas.ripe.net/docs/apis/rest-api-manual/measurements/listing-measurements
+
+3. https://atlas.ripe.net/docs/apis/rest-api-manual/authentication/
+
+4. https://www.kaggle.com/datasets/kaiser14/network-anomaly-dataset
+
+5. https://atlas.ripe.net/docs/getting-started/user-defined-measurements.html
+
+
