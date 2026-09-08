@@ -19,7 +19,6 @@
 O pipeline do projeto já está definido: qualquer fonte de dados precisa produzir registros que se transformem em janelas e, por fim, em X = [latência, perda, jitter]. Falta decidir de onde virão esses dados na próxima fase. A equipe do projeto precisa recomendar, com base em pesquisa e não em preferência pessoal, se a próxima etapa deve usar um dataset real já publicado ou a API do RIPE Atlas. O grupo deve produzir um memorando de decisão com a recomendação da tomada de decisão. A recomendação só tem valor se for sustentada por pesquisa real — não existe resposta pronta para copiar; ela precisa ser construída a partir do que vocês encontraram.
 -->
 
-[Escreva aqui uma frase, qual decisão precisa ser tomada e por quê]
 
 A equipe precisa decidir entre utilizar um dataset real publicado ou a API do RIPE Atlas para alimentar o pipeline com métricas de rede (latência, perda e jitter), garantindo a viabilidade técnica e a robustez necessárias para a próxima fase do projeto.
 
@@ -54,7 +53,7 @@ https://atlas.ripe.net/docs/getting-started/what-is-ripe-atlas
 
 - **Autenticação exigida:** 
 
-Chaves de API (API Keys) para acesso programático ou autenticação por sessão. A maioria das leituras funciona sem autenticação, mas é obrigatória para criar ou gerenciar medições.
+Chaves de API (API Keys) para acesso programático ou autenticação por sessão. A maioria das leituras funcionam sem autenticação, mas é obrigatória para criar ou gerenciar medições.
 
 - **Como se cria uma medição:**
 Para criar uma medição, você usa um assistente de três passos na interface web ou manda uma requisição pela API. Primeiro, nas definições, você escolhe o tipo de teste (como ping ou traceroute) e o IP ou site alvo. Depois, seleciona as sondas de rede (pode deixar 50 aleatórias pelo mundo ou escolher por país/mapa). Por fim, no agendamento, você define quando o teste começa e termina, ou marca como One-off para rodar apenas uma vez na hora.
@@ -98,40 +97,36 @@ O principal risco é o esgotamento de créditos por excesso de novas medições 
 
 <!-- cada integrante deve descrever, com suas próprias palavras, o que efetivamente fez nesta etapa. Contribuições genéricas como "ajudei em tudo" não serão aceitas. Use verbos de ação e seja específico (ex.: "pesquisei , analisei, testei, ... apresentei prós/contras ao grupo, ...").-->
 
-### Integrante 1 — `[Escreva nome completo do aluno ]`
-- **O que fez nesta etapa:** `[]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
-- **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*:
-`[]` 
-`[]`
+### Integrante 1 — `Eduardo Quintino Filho`
+- **O que fez nesta etapa:** `Pesquisei e preenchi parte da Dataset`
+- **Tempo dedicado (aprox.):** `1h20`
+- **Evidência da contribuição**:
+**Imagem da evidencia na mesma pasta do memorando**
 
-### Integrante 2 — `[Escreva nome completo do aluno ]`
-- **O que fez nesta etapa:** `[]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
-- **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*:
-`[]` 
-`[]`
+### Integrante 2 — `Felipe Veiga da Silva`
+- **O que fez nesta etapa:** `Auxiliei o Eduardo com a pesquisa da Dataset e ajudei a preencher o campo 2`
+- **Tempo dedicado (aprox.):** `1h20`
+- **Evidência da contribuição**:
+**Imagem da evidencia na mesma pasta do memorando**
 
-### Integrante 3 — `[Escreva nome completo do aluno ]`
-- **O que fez nesta etapa:** `[]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
-- **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*: 
-`[]` 
-`[]`
+### Integrante 3 — `Henrique de Aguiar Fernandes`
+- **O que fez nesta etapa:** `Fiz parte da pesquisa sobre a API do RIPE Atlas`
+- **Tempo dedicado (aprox.):** `1h00`
+- **Evidência da contribuição**:
+**Imagem da evidencia na mesma pasta do memorando**
 
-### Integrante 4 — `[Escreva nome completo do aluno ]`
-- **O que fez nesta etapa:** `[]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
-- **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*: 
-`[]` 
-`[]`
+### Integrante 4 — `Niccolas Lupetti dos Santos`
+- **O que fez nesta etapa:** `Preenchi o campo 1, auxiliei o Tharik com a finalização da pesquisa sobre a API do RIPE Atlas e ajudei a preencher os demais campos`
+- **Tempo dedicado (aprox.):** `1h40`
+- **Evidência da contribuição**:
 
-### Integrante 5 — `[Escreva nome completo do aluno ]`
-- **O que fez nesta etapa:** `[]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
-- **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*: 
-`[]` 
-`[]`
+**Imagem da evidencia na mesma pasta do memorando**
+
+### Integrante 5 — `Tharik Lima da Silva`
+- **O que fez nesta etapa:** `Finalizei a pesquisa sobre a API do RIPE Atlas e preenchi os demais campos`
+- **Tempo dedicado (aprox.):** `1h40`
+- **Evidência da contribuição**:
+**Imagem da evidencia na mesma pasta do memorando**
 
 ---
 
