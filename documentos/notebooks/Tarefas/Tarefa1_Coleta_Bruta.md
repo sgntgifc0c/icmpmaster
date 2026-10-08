@@ -4,9 +4,12 @@
 **Projeto:** Preditor de degradação de rede com RTT normalizado (independente da rota)  
 **Modelo desta disciplina:** árvore de decisão. Nesta tarefa não se treina árvore.
 
-**Equipe:**  
-**Integrantes:**  
-**Scrum Master da tarefa:**  
+**Equipe:** ICMPMASTER
+
+**Integrantes:**  Eduardo Quintio Filho, Felipe Veiga da Silva, Henrique de Aguiar Fernandes, Niccolas Lupetti dos Santos, Tharik Lima dos Santos
+
+**Scrum Master da tarefa:**  Henrique de Aguiar Fernandes
+
 **Repositório GitHub:**
 
 > Esta tarefa entrega o problema e o **dado cru**. Não há classe OK, RISCO ou FALHA. Não há baseline, não há mediana e não há árvore. Quem rotular aqui mistura a coleta com a decisão da Tarefa 2.
