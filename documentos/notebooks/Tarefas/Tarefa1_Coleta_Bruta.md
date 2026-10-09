@@ -43,8 +43,8 @@ Responder no diário. A resposta tem de bater com o RFC.
 | Quem usa o alerta? | Quem opera o enlace: investigar (FALHA), observar (RISCO) ou não agir (OK). |
 | O que está proibido como definição de falha? | Limiar global de RTT, país, continente ou nome da rota. |
 
-- [ ] RFC do grupo preenchido a partir desta tabela
-- [ ] Dicionário v0.1 só com variáveis brutas
+- [x] RFC do grupo preenchido a partir desta tabela
+- [x] Dicionário v0.1 só com variáveis brutas
 
 ## 2. O que coletar (e o que não criar)
 
@@ -68,25 +68,25 @@ Cada registro bruto guarda, quando a API trouxer:
 
 Regras da coleta:
 
-- [ ] Vários fluxos, com pelo menos um caminho curto e um caminho longo no mesmo período
-- [ ] A diversidade geográfica está documentada e **não** virou classe
-- [ ] Dois blocos de tempo contíguos, sem amostra nos dois: Período A (só para o baseline da Tarefa 2) e Período B (medições que serão rotuladas). Referência do projeto: 7 dias + 7 dias a partir de 06/09/2026 04:32 UTC. Outro recorte só vale se os dois blocos continuarem sem sobreposição e o A tiver volume para o mínimo da Tarefa 2
-- [ ] Timeout permanece no arquivo
-- [ ] JSON bruto preservado; a tabela tratada não apaga o bruto
-- [ ] Parâmetros (período, probes, destinos) em `config/`, não espalhados no código
-- [ ] HTTP com timeout, releitura em erro transitório e coleta idempotente (rodar de novo não duplica)
-- [ ] `requirements.txt` da coleta
+- [x] Vários fluxos, com pelo menos um caminho curto e um caminho longo no mesmo período
+- [x] A diversidade geográfica está documentada e **não** virou classe
+- [x] Dois blocos de tempo contíguos, sem amostra nos dois: Período A (só para o baseline da Tarefa 2) e Período B (medições que serão rotuladas). Referência do projeto: 7 dias + 7 dias a partir de 06/09/2026 04:32 UTC. Outro recorte só vale se os dois blocos continuarem sem sobreposição e o A tiver volume para o mínimo da Tarefa 2
+- [x] Timeout permanece no arquivo
+- [x] JSON bruto preservado; a tabela tratada não apaga o bruto
+- [x] Parâmetros (período, probes, destinos) em `config/`, não espalhados no código
+- [x] HTTP com timeout, releitura em erro transitório e coleta idempotente (rodar de novo não duplica)
+- [x] `requirements.txt` da coleta
 
 **Evidências (notebook, commit, trecho do config):**
 
 ## 3. Relatório de qualidade — ainda sem classe
 
-- [ ] Registros por `fluxo_id`
-- [ ] Início e fim de cada fluxo
-- [ ] Campos ausentes (RTT vazio é ausência, não zero)
-- [ ] Duplicatas
-- [ ] Quantidade de timeouts
-- [ ] RTT e perda descritos (mínimo, mediana, máximo) **sem** dizer OK, RISCO ou FALHA
+- [x] Registros por `fluxo_id`
+- [x] Início e fim de cada fluxo
+- [x] Campos ausentes (RTT vazio é ausência, não zero)
+- [x] Duplicatas
+- [x] Quantidade de timeouts
+- [x] RTT e perda descritos (mínimo, mediana, máximo) **sem** dizer OK, RISCO ou FALHA
 
 **N de registros brutos:**  
 **N de fluxos:**  
@@ -94,14 +94,32 @@ Regras da coleta:
 
 ## 4. Scrum
 
-- [ ] Product Owner = docente; Scrum Master da tarefa; time de desenvolvimento
-- [ ] Board com To do / Doing / Done
-- [ ] Pelo menos 3 histórias: coletar fluxos diversos; preservar o bruto com timeout; separar Período A e Período B sem rotular
+- [x] Product Owner = docente; Scrum Master da tarefa; time de desenvolvimento
+- [x] Board com To do / Doing / Done
+- [x] Pelo menos 3 histórias: coletar fluxos diversos; preservar o bruto com timeout; separar Período A e Período B sem rotular
 
-**Histórias:**  
-1.  
-2.  
-3.  
+**Histórias:**
+
+1. **Coletar fluxos diversos.**
+   Como equipe, quero coletar fluxos de várias sondas, com caminhos curtos e longos no mesmo período, para que a base represente situações diferentes de rede e não só um tipo de enlace.
+   - *Critério de aceite:* pelo menos um caminho curto e um longo em cada período; diversidade geográfica documentada e sem virar classe.
+   - *Resultado:* 40 fluxos em cada período. Período A: 20 curtos e 14 longos. Período B: 19 curtos e 15 longos. A tabela de países/ASN das sondas fica em arquivo separado, fora das tabelas de medição.
+   - *Evidência:* notebook, seções 10-C a 10-E e 10-H.
+   - *Status:* Done
+
+2. **Preservar o bruto com timeout.**
+   Como equipe, quero guardar o JSON original da API e manter os registros sem resposta, para não perder a informação de falha e poder refazer qualquer tratamento depois.
+   - *Critério de aceite:* JSON bruto salvo sem alteração; nenhum registro de timeout removido; RTT ausente nunca gravado como 0.
+   - *Resultado:* um JSON por sonda e por período. Os timeouts no JSON batem com os da tabela: 2.928 no Período A e 810 no Período B. A coleta é idempotente, então rodar de novo não duplica.
+   - *Evidência:* notebook, seções 8, 9, 10-F e 10-G; `config/coleta_config.json`; `requirements.txt`.
+   - *Status:* Done
+
+3. **Separar Período A e Período B sem rotular.**
+   Como equipe, quero dois blocos de tempo contíguos e sem sobreposição, para que o baseline (A) fique independente das medições que serão rotuladas na Tarefa 2 (B).
+   - *Critério de aceite:* blocos de 7 dias a partir de 06/09/2026 04:32 UTC, sem medição em comum; relatório de qualidade sem classe.
+   - *Resultado:* A vai de 06/09 04:32 a 13/09 04:31 (99.682 registros); B vai de 13/09 04:32 a 20/09 04:31 (100.470 registros). Nenhuma medição repetida entre os dois. Não existe coluna de classe em nenhuma tabela.
+   - *Evidência:* notebook, seções 10-A, 10-G e 10-H.
+   - *Status:* Done
 
 **Link do board:**
 
