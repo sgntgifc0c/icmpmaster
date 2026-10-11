@@ -11,7 +11,7 @@
 **Scrum Master da tarefa:**  Henrique de Aguiar Fernandes
 
 **Repositório GitHub:**
-
+ https://github.com/sgntgifc0c/icmpmaster
 > Esta tarefa entrega o problema e o **dado cru**. Não há classe OK, RISCO ou FALHA. Não há baseline, não há mediana e não há árvore. Quem rotular aqui mistura a coleta com a decisão da Tarefa 2.
 >
 > A rota entra na coleta só para haver caminhos curtos e longos no mesmo arquivo. RTT alto **não** é falha. País, IP e nome da rota **não** serão coluna da árvore.
@@ -131,8 +131,8 @@ Regras da coleta:
 
 ## 6. Evidências gerais
 
-- Link do RFC:
-- Link do dicionário v0.1:
+- Link do RFC:  https://github.com/sgntgifc0c/icmpmaster/blob/main/documentos/notebooks/RFC.md
+- Link do dicionário v0.1: https://github.com/sgntgifc0c/icmpmaster/blob/main/documentos/notebooks/dicionario_v0.1.md
 - Link dos commits:
 - Link de `data/raw/` e do `config/`:
 
